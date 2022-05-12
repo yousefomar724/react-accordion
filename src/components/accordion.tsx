@@ -5,7 +5,8 @@ const data = {
   accordion: [
     {
       question: "Who I am ?",
-      answer: "I am a Muslim, with an Arabic tongue, of Egyptian birth and of Nubian origins"
+      answer:
+        "I am a Muslim, with an Arabic tongue, of Egyptian birth and of Nubian origins"
     },
     {
       question: "What I do ?",
@@ -35,7 +36,7 @@ interface DataProps {
 
 const Accordion: React.FC = () => {
   const { accordion } = data as DataProps;
-  const [questionNum, setQuestionNum] = useState(-1);
+  const [questionNum, setQuestionNum] = useState<number>(-1);
 
   const showAnswer = (index: number): void => {
     if (questionNum === index) {
